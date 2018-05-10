@@ -16,7 +16,7 @@
       var vectorSource = new ol.source.Vector({
         format: new ol.format.GeoJSON(),
         url: function(extent) {
-          return 'http://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?&SERVICE=WFS&' +
+          return 'https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?&SERVICE=WFS&' +
               'version=2.0.0&request=GetFeature&typename=datavic:VMLITE_PUBLIC_LAND_SOFTWOOD_SU5&' +
               'outputFormat=application/json&srsname=urn:ogc:def:crs:EPSG::4326&' +
               'bbox=' + extent.join(',') + ',EPSG:4326';
