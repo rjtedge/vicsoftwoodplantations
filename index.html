@@ -10,8 +10,6 @@
     <div id="map" class="map"></div>
        <script>
 	   
-
-	  
       var vectorSource = new ol.source.Vector({
         format: new ol.format.GeoJSON(),
         url: function(extent) {
@@ -22,7 +20,6 @@
         },
         strategy: ol.loadingstrategy.bbox
       });
-
 
       var vector = new ol.layer.Vector({
         source: vectorSource,
@@ -36,7 +33,7 @@
 
       var raster = new ol.layer.Tile({
         source: new ol.source.BingMaps({
-          imagerySet: 'Aerial',
+          imagerySet: 'AerialWithLabels',
           key: 'Akx6ncMCKcVwcuJLrq2wuBW0sebTKTI8jrvhQm8YesKeBQdCMraA9WzqYd4LigAx'
         })
       });
