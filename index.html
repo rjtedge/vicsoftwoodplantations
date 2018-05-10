@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WFS - GetFeature</title>
+    <title>Victorian Softwood Plantation Finder</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
@@ -10,6 +10,8 @@
   <body>
     <div id="map" class="map"></div>
        <script>
+	   
+
 	  
       var vectorSource = new ol.source.Vector({
         format: new ol.format.GeoJSON(),
@@ -33,6 +35,8 @@
         })
       });
 
+
+
       var raster = new ol.layer.Tile({
         source: new ol.source.BingMaps({
           imagerySet: 'Aerial',
@@ -49,6 +53,7 @@
           zoom: 12
         })
       });
+
   
     </script>
   </body>
