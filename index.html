@@ -2,10 +2,9 @@
 <html>
   <head>
     <title>Victorian Softwood Plantation Finder</title>
-    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
-    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+    <script src="ol.js"></script>
   </head>
   <body>
     <div id="map" class="map"></div>
@@ -16,7 +15,7 @@
       var vectorSource = new ol.source.Vector({
         format: new ol.format.GeoJSON(),
         url: function(extent) {
-          return '//services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?&SERVICE=WFS&' +
+          return 'https://services.land.vic.gov.au/catalogue/publicproxy/guest/dv_geoserver/wfs?&SERVICE=WFS&' +
               'version=2.0.0&request=GetFeature&typename=datavic:VMLITE_PUBLIC_LAND_SOFTWOOD_SU5&' +
               'outputFormat=application/json&srsname=urn:ogc:def:crs:EPSG::4326&' +
               'bbox=' + extent.join(',') + ',EPSG:4326';
